@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Kattis
+namespace Engineeringenglish
 {
     /// <summary>
     /// Engineering English - Working 
@@ -14,9 +14,9 @@ namespace Kattis
     /// “. . wastes money”. This is what your program should do – remove all duplicate words and replace them with a period.
     /// </summary>
 
-    public class engineeringenglish
+    internal class Engineeringenglish
     {
-        public static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //Initialize variables 
             var uniqueWords = new HashSet<string>();

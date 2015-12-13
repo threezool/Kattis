@@ -7,8 +7,8 @@
     <ProjectGuid>{C14F8CB4-0CB2-472D-B083-DEE021988C64}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kattis</RootNamespace>
-    <AssemblyName>Kattis</AssemblyName>
+    <RootNamespace>Engineeringenglish</RootNamespace>
+    <AssemblyName>Engineeringenglish</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
