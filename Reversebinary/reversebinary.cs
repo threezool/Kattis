@@ -1,7 +1,7 @@
 ﻿using System;
 
 /// <summary>
-/// Reverse Binary - Working
+/// Reverse Binary - Working 
 /// 
 /// Yi has moved to Sweden and now goes to school here. The first years of schooling she got in China, and the curricula do not 
 /// match completely in the two countries. Yi likes mathematics, but now... The teacher explains the algorithm for subtraction on 
