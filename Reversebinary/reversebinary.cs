@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Diagnostics;
 
 /// <summary>
 /// Reverse Binary - Working
@@ -21,9 +16,16 @@ namespace Kattis
     {
         static void Main(string[] args)
         {
+            // Parse input to a integer
             var inValue = int.Parse(Console.ReadLine());
+
+            // Convert the integer to a binary
             var binaryString = Convert.ToString(inValue, 2);
+
+            // Reverse the binary
             var reversedBinary = Reverse(binaryString);
+
+            // Output the convertation from binary to decimal
             Console.WriteLine(Convert.ToInt32(reversedBinary, 2));
         }
 
