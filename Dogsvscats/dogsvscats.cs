@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kattis
+namespace Dogsvscats
 {
     /// <summary>
     /// Dogs vs Cats - Not Working 
@@ -18,20 +18,17 @@ namespace Kattis
     /// opinions satisfied. Write a program to calculate this maximum number of viewers.
     /// </summary>
 
-    class dogsvscats
+    internal class Dogsvscats
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            int numberOfLists;
-            string contestInput;
+            var numberOfLists = int.Parse(Console.ReadLine().Trim());
 
-
-            numberOfLists = int.Parse(Console.ReadLine().Trim());
-
-            for (int i = 0; i < numberOfLists; i++)
+            for (var i = 0; i < numberOfLists; i++)
             {
-                contestInput = Console.ReadLine();
+                var contestInput = Console.ReadLine();
 
+                if (contestInput == null) continue;
                 var components = contestInput.Split((char[])null, StringSplitOptions.RemoveEmptyEntries);
 
                 foreach (var item in components)
