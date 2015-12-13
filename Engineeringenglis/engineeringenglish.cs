@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 
+/// <summary>
+/// Engineering English - Working
+/// 
+/// Engineers have taken over the university’s English department! As part of their plan to dominate the university, 
+/// they have employed you to write their nefarious software. Their goal is to eliminate all duplicated words from all 
+/// texts in the English department, because, as they say, “duplicated words are duplicated work” and 
+/// “duplicated work wastes money.” Actually, what they would really say is “duplicated words are . work” and 
+/// “. . wastes money”. This is what your program should do – remove all duplicate words and replace them with a period.
+/// </summary>
+
 namespace Kattis
 {
     public class engineeringenglish
