@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Kattis
+namespace Reversebinary
 {
     /// <summary>
     /// Reverse Binary - Working 
@@ -11,10 +11,9 @@ namespace Kattis
     /// binary representations of the numbers on the board? Yi dreams away and starts constructing a program that reverses the binary 
     /// representation, in her mind. As soon as the lecture ends, she will go home and write it on her computer.
     /// </summary>
-    
-    class reversebinary
+    internal class Reversebinary
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Parse input to a integer
             var inValue = int.Parse(Console.ReadLine());
@@ -33,7 +32,7 @@ namespace Kattis
         {
             var length = value.Length - 1;
             var result = new char[value.Length];
-            for (int i = length; i > -1; i--)
+            for (var i = length; i > -1; i--)
             {
                 result[length - i] = value[i];
             }
