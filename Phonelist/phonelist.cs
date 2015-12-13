@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kattis
+namespace Phonelist
 {
     /// <summary>
     /// Phonelist - Not Working 
@@ -17,16 +17,16 @@ namespace Kattis
     /// as you had dialled the first three digits of Bob’s phone number.So this list would not be consistent.
     /// </summary>
 
-    class phonelist
+    internal class Phonelist
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            int numberOfLists, numberOfEntries;
-            bool isConsistent;
+            int numberOfLists;
             int.TryParse(Console.ReadLine(), out numberOfLists);
-            for (int i = 0; i < numberOfLists; i++)
+            for (var i = 0; i < numberOfLists; i++)
             {
-                isConsistent = true;
+                var isConsistent = true;
+                int numberOfEntries;
                 int.TryParse(Console.ReadLine(), out numberOfEntries);
                 List<string> entryList = new List<string>();
                 while (entryList.Count < numberOfEntries)
@@ -34,13 +34,11 @@ namespace Kattis
                     entryList.Add(Console.ReadLine());
                 }
                 entryList.Sort();
-                for (int j = 1; j < numberOfEntries; j++)
+                for (var j = 1; j < numberOfEntries; j++)
                 {
-                    if (entryList[j].StartsWith(entryList[j - 1], StringComparison.Ordinal))
-                    {
-                        isConsistent = false;
-                        break;
-                    }
+                    if (!entryList[j].StartsWith(entryList[j - 1], StringComparison.Ordinal)) continue;
+                    isConsistent = false;
+                    break;
                 }
                 Console.WriteLine(isConsistent ? "YES" : "NO");
             }
