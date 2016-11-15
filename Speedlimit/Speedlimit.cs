@@ -3,7 +3,7 @@
 namespace Speedlimit
 {
     /// <summary>
-    /// Speed Limit - Not Working
+    /// Speed Limit - Working
     /// 
     /// Bill and Ted are taking a road trip. But the odometer in their car is broken, so they don’t know how many miles 
     /// they have driven. Fortunately, Bill has a working stopwatch, so they can record their speed and the total time 
@@ -19,20 +19,23 @@ namespace Speedlimit
 
             while (caseInput > 0)
             {
-                var totalDistance = 0;
-                var output = 0;
+                var totalTimeTraveled = 0;
+                var result = 0;
 
                 for (var i = 0; i < caseInput; i++)
                 {
-                    var speed = int.Parse(Console.ReadLine());
-                    var newDistance = int.Parse(Console.ReadLine());
+                    var newEntry = Console.ReadLine().Split(' ');
+                    var speed = int.Parse(newEntry[0]);
+                    var hours = int.Parse(newEntry[1]);
 
-                    output = speed * (newDistance - totalDistance) + output;
+                    int timeTraveled = hours - totalTimeTraveled;
 
-                    totalDistance = newDistance;
+                    result += speed * timeTraveled;
+
+                    totalTimeTraveled = hours;
                 }
 
-                Console.WriteLine(output + " miles");
+                Console.WriteLine(result + " miles");
 
                 caseInput = int.Parse(Console.ReadLine());
             }
